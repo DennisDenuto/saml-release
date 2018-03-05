@@ -1,0 +1,3 @@
+[submodule "src/github.com/crewjam/saml"]
+	path = src/github.com/crewjam/saml
+	url = https://github.com/crewjam/saml
