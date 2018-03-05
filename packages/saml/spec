@@ -7,10 +7,21 @@ dependencies:
 files:
   - github.com/beevik/etree/*.go # gosub
   - github.com/crewjam/saml/*.go # gosub
+  - github.com/crewjam/saml/example/idp/*.go # gosub
   - github.com/crewjam/saml/logger/*.go # gosub
+  - github.com/crewjam/saml/samlidp/*.go # gosub
   - github.com/crewjam/saml/xmlenc/*.go # gosub
   - github.com/jonboulle/clockwork/*.go # gosub
   - github.com/russellhaering/goxmldsig/*.go # gosub
   - github.com/russellhaering/goxmldsig/etreeutils/*.go # gosub
   - github.com/russellhaering/goxmldsig/types/*.go # gosub
+  - github.com/zenazn/goji/*.go # gosub
+  - github.com/zenazn/goji/bind/*.go # gosub
+  - github.com/zenazn/goji/graceful/*.go # gosub
+  - github.com/zenazn/goji/graceful/listener/*.go # gosub
+  - github.com/zenazn/goji/web/*.go # gosub
+  - github.com/zenazn/goji/web/middleware/*.go # gosub
+  - github.com/zenazn/goji/web/mutil/*.go # gosub
+  - golang.org/x/crypto/bcrypt/*.go # gosub
+  - golang.org/x/crypto/blowfish/*.go # gosub
   - golang.org/x/crypto/ripemd160/*.go # gosub

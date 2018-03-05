@@ -38,5 +38,5 @@ function sync_package() {
   )
 }
 
-sync_package saml -app github.com/crewjam/saml
+sync_package saml -app github.com/crewjam/saml/example/idp
 

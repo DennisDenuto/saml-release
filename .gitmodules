@@ -13,3 +13,6 @@
 [submodule "src/github.com/jonboulle/clockwork"]
 	path = src/github.com/jonboulle/clockwork
 	url = https://github.com/jonboulle/clockwork
+[submodule "src/github.com/zenazn/goji"]
+	path = src/github.com/zenazn/goji
+	url = https://github.com/zenazn/goji
