@@ -1,3 +1,15 @@
 [submodule "src/github.com/crewjam/saml"]
 	path = src/github.com/crewjam/saml
 	url = https://github.com/crewjam/saml
+[submodule "src/github.com/beevik/etree"]
+	path = src/github.com/beevik/etree
+	url = https://github.com/beevik/etree
+[submodule "src/github.com/russellhaering/goxmldsig"]
+	path = src/github.com/russellhaering/goxmldsig
+	url = https://github.com/russellhaering/goxmldsig
+[submodule "src/golang.org/x/crypto"]
+	path = src/golang.org/x/crypto
+	url = https://github.com/golang/crypto.git
+[submodule "src/github.com/jonboulle/clockwork"]
+	path = src/github.com/jonboulle/clockwork
+	url = https://github.com/jonboulle/clockwork
