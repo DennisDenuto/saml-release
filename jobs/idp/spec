@@ -1,8 +1,16 @@
 ---
 name: idp
 
-templates: {}
+templates:
+  saml_ctl.erb:     bin/saml_ctl
+  saml_as_vcap.erb: bin/saml_as_vcap
 
-packages: []
 
-properties: {}
+packages:
+  - saml
+
+properties:
+  port:
+      description: "Port which saml idp will listen on"
+      default: 9090
+

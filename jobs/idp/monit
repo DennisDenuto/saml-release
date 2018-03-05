@@ -1,0 +1,6 @@
+check process saml
+  with pidfile /var/vcap/sys/run/saml/saml.pid
+  start program "/usr/bin/timeout 25 /var/vcap/jobs/idp/bin/saml_ctl start"
+   with timeout 30 seconds
+  stop program "/var/vcap/jobs/idp/bin/saml_ctl stop"
+  group vcap

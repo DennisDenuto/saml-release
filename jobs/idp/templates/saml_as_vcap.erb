@@ -1,0 +1,10 @@
+#!/bin/bash -eu
+
+set -o pipefail
+
+/var/vcap/packages/saml/bin/saml --idp="${SAML_URL}" \
+  2> >(tee -a "${LOG_DIR}"/saml.stderr.log | logger -p user.error -t saml) \
+  1> >(tee -a "${LOG_DIR}"/saml.stdout.log | logger -t saml) &
+
+pid=$!
+echo "${pid}" > "${PIDFILE}"

@@ -1,0 +1,32 @@
+#!/bin/bash -eu
+
+export RUN_DIR=/var/vcap/sys/run/saml
+export LOG_DIR=/var/vcap/sys/log/saml
+export PIDFILE="${RUN_DIR}"/saml.pid
+
+export PORT=<%= p('port') %>
+export SAML_URL="http://0.0.0.0":"${PORT}"
+
+mkdir -p "${RUN_DIR}"
+mkdir -p "${LOG_DIR}"
+
+exec 1>> "${LOG_DIR}"/saml_ctl.out.log
+exec 2>> "${LOG_DIR}"/saml_ctl.err.log
+
+case $1 in
+
+  start)
+    chown -R vcap:vcap "${RUN_DIR}"
+    chown -R vcap:vcap "${LOG_DIR}"
+
+    exec chpst -u vcap:vcap bash -c "/var/vcap/jobs/idp/bin/saml_as_vcap"
+
+  stop)
+      pid=$(cat "${PIDFILE}")
+      kill -9 $pid
+
+   *)
+    echo "Usage: $0 {start|stop}"
+
+    ;;
+
