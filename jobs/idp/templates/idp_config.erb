@@ -1,5 +1,5 @@
 {
     "address": "https://<%= spec.ip %>:<%= p('port') %>",
-    "certificate": "<%= p('tlsCert') %>",
-    "private_key": "<%= p('tlsKey') %>"
+    "certificate": "/var/vcap/jobs/idp/config/idp_certificate",
+    "private_key": "/var/vcap/jobs/idp/config/idp_private_key"
 }

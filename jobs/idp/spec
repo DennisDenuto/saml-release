@@ -2,10 +2,12 @@
 name: idp
 
 templates:
-  saml_ctl.erb:     bin/saml_ctl
-  saml_as_vcap.erb: bin/saml_as_vcap
-  idp_config.erb:   config/idp_config.json
-  idp_users.erb:    config/idp_users.json
+  saml_ctl.erb:           bin/saml_ctl
+  saml_as_vcap.erb:       bin/saml_as_vcap
+  idp_config.erb:         config/idp_config.json
+  idp_users.erb:          config/idp_users.json
+  idp_certificate.erb:    config/idp_certificate
+  idp_private_key.erb:    config/idp_private_key
 
 
 packages:
