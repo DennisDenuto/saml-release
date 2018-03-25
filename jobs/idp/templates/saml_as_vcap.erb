@@ -2,7 +2,9 @@
 
 set -o pipefail
 
-/var/vcap/packages/saml/bin/saml --idp="${SAML_URL}" \
+/var/vcap/packages/saml/bin/saml \
+    -c "/var/vcap/jobs/idp/config/idp_config.json" \
+    -users "/var/vcap/jobs/idp/config/idp_isers.json" \
   2> >(tee -a "${LOG_DIR}"/saml.stderr.log | logger -p user.error -t saml) \
   1> >(tee -a "${LOG_DIR}"/saml.stdout.log | logger -t saml) &
 

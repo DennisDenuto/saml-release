@@ -4,13 +4,33 @@ name: idp
 templates:
   saml_ctl.erb:     bin/saml_ctl
   saml_as_vcap.erb: bin/saml_as_vcap
+  idp_config.erb:   config/idp_config.json
+  idp_users.erb:    config/idp_users.json
 
 
 packages:
   - saml
 
 properties:
+  tlsCert:
+    description: "TLS server certificate for idp to use"
+  tlsKey:
+    description: "TLS server certificate private key"
   port:
       description: "Port which saml idp will listen on"
       default: 9090
+  users:
+       description: "Users to bootstrap idp with"
+       example: |
+        [
+         {
+             "name":"Bob",
+             "password":"some-password",
+             "groups":["group1"],
+             "email":"bob@email.com",
+             "common_name":"BOB",
+             "surname":"Bobby",
+             "given_name":"Bobbie"
+         }
+        ]
 

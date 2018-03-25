@@ -4,9 +4,6 @@ export RUN_DIR=/var/vcap/sys/run/saml
 export LOG_DIR=/var/vcap/sys/log/saml
 export PIDFILE="${RUN_DIR}"/saml.pid
 
-export PORT=<%= p('port') %>
-export SAML_URL="http://<%= spec.ip %>":"${PORT}"
-
 mkdir -p "${RUN_DIR}"
 mkdir -p "${LOG_DIR}"
 
