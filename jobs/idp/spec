@@ -21,6 +21,9 @@ properties:
   port:
       description: "Port which saml idp will listen on"
       default: 9090
+  sp_metadata_urls:
+    description: "urls for saml idp to fetch and save SP metadata"
+    example: http://example/metadata, http://example2/metadata2
   users:
        description: "Users to bootstrap idp with"
        example: |

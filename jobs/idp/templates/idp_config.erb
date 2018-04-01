@@ -1,5 +1,6 @@
 {
     "address": "https://<%= spec.ip %>:<%= p('port') %>",
     "certificate": "/var/vcap/jobs/idp/config/idp_certificate",
-    "private_key": "/var/vcap/jobs/idp/config/idp_private_key"
+    "private_key": "/var/vcap/jobs/idp/config/idp_private_key",
+    "sp_metadata_urls": <%= p('sp_metadata_urls').split(",") %>
 }
