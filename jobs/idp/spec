@@ -23,7 +23,11 @@ properties:
       default: 9090
   sp_metadata_urls:
     description: "urls for saml idp to fetch and save SP metadata"
-    example: http://example/metadata, http://example2/metadata2
+    example: |
+      {
+        "sp_id": "http://someurl",
+        "sp_id2": "http://someurl2"
+      }
   users:
        description: "Users to bootstrap idp with"
        example: |
